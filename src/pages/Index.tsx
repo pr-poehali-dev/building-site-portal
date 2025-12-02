@@ -21,7 +21,10 @@ const Index = () => {
       area: '2,500 м²',
       duration: '8 месяцев',
       image: 'https://cdn.poehali.dev/files/201564df-6b95-48da-a693-c107e9601e73.jpg',
-      description: 'Современный каркасный склад с высокими потолками'
+      description: 'Современный каркасный склад с высокими потолками',
+      technologies: ['Металлокаркас', 'Сэндвич-панели', 'Армирование'],
+      client: 'ООО "Логистик"',
+      review: 'Отличная работа! Соблюдены все сроки, качество превосходное.'
     },
     {
       id: 2,
@@ -30,7 +33,10 @@ const Index = () => {
       area: '1,800 м²',
       duration: '6 месяцев',
       image: 'https://cdn.poehali.dev/files/5c493584-2a26-4b7b-93a8-7ca58cce670f.jpg',
-      description: 'Быстровозводимое здание из сэндвич-панелей'
+      description: 'Быстровозводимое здание из сэндвич-панелей',
+      technologies: ['Профнастил', 'Сэндвич-панели', 'Металлокаркас'],
+      client: 'ИП Смирнов А.В.',
+      review: 'Построили за 6 месяцев вместо обещанных 8. Рекомендую!'
     },
     {
       id: 3,
@@ -39,7 +45,10 @@ const Index = () => {
       area: '280 м²',
       duration: '10 месяцев',
       image: 'https://cdn.poehali.dev/files/3da74330-d2b7-4d8d-b02a-e0b48c125b0b.jpg',
-      description: 'Двухэтажный кирпичный дом с гаражом'
+      description: 'Двухэтажный кирпичный дом с гаражом',
+      technologies: ['Керамический кирпич', 'Монолитная плита', 'Утепление'],
+      client: 'Семья Ивановых',
+      review: 'Дом мечты готов! Спасибо за профессионализм и внимание к деталям.'
     },
     {
       id: 4,
@@ -48,7 +57,10 @@ const Index = () => {
       area: '450 м²',
       duration: '4 месяца',
       image: 'https://cdn.poehali.dev/files/5c0adb3b-6475-47dc-8fc1-a288ef416ab2.png',
-      description: 'Быстровозводимое модульное здание для офисов'
+      description: 'Быстровозводимое модульное здание для офисов',
+      technologies: ['Модульные блоки', 'Профлист', 'Энергоэффективность'],
+      client: 'ЗАО "СтройТех"',
+      review: 'Быстро, качественно, в рамках бюджета. Очень довольны!'
     },
     {
       id: 5,
@@ -57,7 +69,10 @@ const Index = () => {
       area: '3,200 м²',
       duration: '7 месяцев',
       image: 'https://cdn.poehali.dev/files/67f2b66e-78c9-48fd-8916-ae53b219e13e.jpg',
-      description: 'Производственно-складской комплекс из профнастила'
+      description: 'Производственно-складской комплекс из профнастила',
+      technologies: ['Профнастил', 'Металлокаркас', 'Вентиляция'],
+      client: 'ООО "ПромСклад"',
+      review: 'Надёжная конструкция, отличная вентиляция. Всё как обсуждали.'
     },
     {
       id: 6,
@@ -66,7 +81,10 @@ const Index = () => {
       area: '180 м²',
       duration: '8 месяцев',
       image: 'https://cdn.poehali.dev/files/2b4dfd87-e773-459c-baf8-ccdc43a41912.jpg',
-      description: 'Дом из газобетонных блоков с кирпичной кладкой'
+      description: 'Дом из газобетонных блоков с кирпичной кладкой',
+      technologies: ['Газобетон', 'Облицовочный кирпич', 'Армопояс'],
+      client: 'Семья Петровых',
+      review: 'Тёплый и надёжный дом! Зимой экономим на отоплении.'
     },
     {
       id: 7,
@@ -75,7 +93,10 @@ const Index = () => {
       area: '220 м²',
       duration: '3 месяца',
       image: 'https://cdn.poehali.dev/files/b2c238fd-4160-4ed5-8cec-dbd5a16e85df.jpg',
-      description: 'Монолитный ленточный фундамент с армированием'
+      description: 'Монолитный ленточный фундамент с армированием',
+      technologies: ['Монолит', 'Армирование А500', 'Гидроизоляция'],
+      client: 'ИП Соколов Д.М.',
+      review: 'Качественный фундамент, не боимся просадок. Профессионалы!'
     }
   ];
 
@@ -250,8 +271,10 @@ const Index = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
                 <CardHeader>
-                  <CardTitle className="text-xl">{project.title}</CardTitle>
-                  <div className="flex gap-4 text-sm text-muted-foreground mt-2">
+                  <CardTitle className="text-xl mb-2">{project.title}</CardTitle>
+                  <CardDescription className="mb-4">{project.description}</CardDescription>
+                  
+                  <div className="flex gap-4 text-sm text-muted-foreground mb-4">
                     <div className="flex items-center gap-1">
                       <Icon name="Ruler" size={16} />
                       {project.area}
@@ -259,6 +282,32 @@ const Index = () => {
                     <div className="flex items-center gap-1">
                       <Icon name="Clock" size={16} />
                       {project.duration}
+                    </div>
+                  </div>
+
+                  <div className="mb-4">
+                    <div className="text-sm font-semibold mb-2 flex items-center gap-1">
+                      <Icon name="Wrench" size={16} className="text-accent" />
+                      Технологии:
+                    </div>
+                    <div className="flex flex-wrap gap-2">
+                      {project.technologies?.map((tech, idx) => (
+                        <Badge key={idx} variant="secondary" className="text-xs">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="border-t pt-4">
+                    <div className="flex items-start gap-2 mb-2">
+                      <Icon name="User" size={16} className="text-accent mt-1 flex-shrink-0" />
+                      <div>
+                        <div className="text-sm font-semibold">{project.client}</div>
+                        <div className="text-xs text-muted-foreground italic mt-1">
+                          "{project.review}"
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </CardHeader>
