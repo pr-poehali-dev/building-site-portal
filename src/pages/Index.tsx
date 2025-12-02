@@ -395,8 +395,8 @@ const Index = () => {
                 </div>
                 <div>
                   <h3 className="font-bold mb-2">Телефон</h3>
-                  <p className="text-muted-foreground">+7 (495) 123-45-67</p>
-                  <p className="text-muted-foreground">+7 (800) 555-35-35</p>
+                  <p className="text-muted-foreground">+7 (904)300-76-25</p>
+                  <p className="text-muted-foreground">+7 (908)068-48-55</p>
                 </div>
               </div>
             </Card>
@@ -422,7 +422,7 @@ const Index = () => {
                 <div>
                   <h3 className="font-bold mb-2">Адрес офиса</h3>
                   <p className="text-muted-foreground">г. Челябинск, Дербентская 49А</p>
-                  <p className="text-muted-foreground">БЦ "Архитектор", офис 301</p>
+                  <p className="text-muted-foreground"></p>
                 </div>
               </div>
             </Card>
