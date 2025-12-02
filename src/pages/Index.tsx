@@ -752,11 +752,12 @@ const Index = () => {
                   </div>
                   <div>
                     <h3 className="font-bold mb-2">Время работы</h3>
-                  <p className="text-muted-foreground">Пн-Пт: 9:00 - 18:00</p>
-                  <p className="text-muted-foreground">Сб-Вс: по договорённости</p>
+                    <p className="text-muted-foreground">Пн-Пт: 9:00 - 18:00</p>
+                    <p className="text-muted-foreground">Сб-Вс: по договорённости</p>
+                  </div>
                 </div>
-              </div>
-            </Card>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
