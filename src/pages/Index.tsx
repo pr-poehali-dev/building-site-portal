@@ -16,27 +16,39 @@ const Index = () => {
   const projects = [
     {
       id: 1,
+      title: 'Складской комплекс с металлоконструкциями',
+      type: 'warehouse',
+      area: '2,500 м²',
+      duration: '8 месяцев',
+      image: 'https://cdn.poehali.dev/files/201564df-6b95-48da-a693-c107e9601e73.jpg',
+      description: 'Современный каркасный склад с высокими потолками'
+    },
+    {
+      id: 2,
+      title: 'Ангар быстровозводимый',
+      type: 'warehouse',
+      area: '1,800 м²',
+      duration: '6 месяцев',
+      image: 'https://cdn.poehali.dev/files/5c493584-2a26-4b7b-93a8-7ca58cce670f.jpg',
+      description: 'Быстровозводимое здание из сэндвич-панелей'
+    },
+    {
+      id: 3,
       title: 'Жилой комплекс "Сосновый бор"',
       type: 'residential',
       area: '15,000 м²',
       duration: '18 месяцев',
-      image: 'https://cdn.poehali.dev/projects/c61c3e08-801d-455e-8e88-f9a5b4887bdf/files/aee0b416-0560-4119-8ecc-b0cec8f4c7c0.jpg'
+      image: 'https://cdn.poehali.dev/projects/c61c3e08-801d-455e-8e88-f9a5b4887bdf/files/aee0b416-0560-4119-8ecc-b0cec8f4c7c0.jpg',
+      description: 'Современный жилой комплекс премиум-класса'
     },
     {
-      id: 2,
-      title: 'Логистический центр "Транзит"',
-      type: 'warehouse',
-      area: '25,000 м²',
-      duration: '12 месяцев',
-      image: 'https://cdn.poehali.dev/projects/c61c3e08-801d-455e-8e88-f9a5b4887bdf/files/15e423ae-f049-4503-951a-ed9778158bff.jpg'
-    },
-    {
-      id: 3,
+      id: 4,
       title: 'Бизнес-центр "Горизонт"',
       type: 'commercial',
       area: '8,500 м²',
       duration: '14 месяцев',
-      image: 'https://cdn.poehali.dev/projects/c61c3e08-801d-455e-8e88-f9a5b4887bdf/files/0c2b84a4-6434-4b90-a019-0ef2b3824919.jpg'
+      image: 'https://cdn.poehali.dev/projects/c61c3e08-801d-455e-8e88-f9a5b4887bdf/files/0c2b84a4-6434-4b90-a019-0ef2b3824919.jpg',
+      description: 'Офисное здание класса А в центре города'
     }
   ];
 
