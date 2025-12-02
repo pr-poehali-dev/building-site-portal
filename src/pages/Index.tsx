@@ -13,8 +13,6 @@ const Index = () => {
     complexity: 1
   });
 
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
-
   const projects = [
     {
       id: 1,
@@ -23,9 +21,7 @@ const Index = () => {
       area: '2,500 м²',
       duration: '8 месяцев',
       image: 'https://cdn.poehali.dev/files/201564df-6b95-48da-a693-c107e9601e73.jpg',
-      description: 'Современный каркасный склад с высокими потолками',
-      beforeImage: 'https://cdn.poehali.dev/files/b2c238fd-4160-4ed5-8cec-dbd5a16e85df.jpg',
-      afterImage: 'https://cdn.poehali.dev/files/201564df-6b95-48da-a693-c107e9601e73.jpg'
+      description: 'Современный каркасный склад с высокими потолками'
     },
     {
       id: 2,
@@ -34,9 +30,7 @@ const Index = () => {
       area: '1,800 м²',
       duration: '6 месяцев',
       image: 'https://cdn.poehali.dev/files/5c493584-2a26-4b7b-93a8-7ca58cce670f.jpg',
-      description: 'Быстровозводимое здание из сэндвич-панелей',
-      beforeImage: 'https://cdn.poehali.dev/files/b2c238fd-4160-4ed5-8cec-dbd5a16e85df.jpg',
-      afterImage: 'https://cdn.poehali.dev/files/5c493584-2a26-4b7b-93a8-7ca58cce670f.jpg'
+      description: 'Быстровозводимое здание из сэндвич-панелей'
     },
     {
       id: 3,
@@ -45,9 +39,7 @@ const Index = () => {
       area: '280 м²',
       duration: '10 месяцев',
       image: 'https://cdn.poehali.dev/files/3da74330-d2b7-4d8d-b02a-e0b48c125b0b.jpg',
-      description: 'Двухэтажный кирпичный дом с гаражом',
-      beforeImage: 'https://cdn.poehali.dev/files/b2c238fd-4160-4ed5-8cec-dbd5a16e85df.jpg',
-      afterImage: 'https://cdn.poehali.dev/files/3da74330-d2b7-4d8d-b02a-e0b48c125b0b.jpg'
+      description: 'Двухэтажный кирпичный дом с гаражом'
     },
     {
       id: 4,
@@ -56,9 +48,7 @@ const Index = () => {
       area: '450 м²',
       duration: '4 месяца',
       image: 'https://cdn.poehali.dev/files/5c0adb3b-6475-47dc-8fc1-a288ef416ab2.png',
-      description: 'Быстровозводимое модульное здание для офисов',
-      beforeImage: 'https://cdn.poehali.dev/files/b2c238fd-4160-4ed5-8cec-dbd5a16e85df.jpg',
-      afterImage: 'https://cdn.poehali.dev/files/5c0adb3b-6475-47dc-8fc1-a288ef416ab2.png'
+      description: 'Быстровозводимое модульное здание для офисов'
     },
     {
       id: 5,
@@ -67,9 +57,7 @@ const Index = () => {
       area: '3,200 м²',
       duration: '7 месяцев',
       image: 'https://cdn.poehali.dev/files/67f2b66e-78c9-48fd-8916-ae53b219e13e.jpg',
-      description: 'Производственно-складской комплекс из профнастила',
-      beforeImage: 'https://cdn.poehali.dev/files/2b4dfd87-e773-459c-baf8-ccdc43a41912.jpg',
-      afterImage: 'https://cdn.poehali.dev/files/67f2b66e-78c9-48fd-8916-ae53b219e13e.jpg'
+      description: 'Производственно-складской комплекс из профнастила'
     },
     {
       id: 6,
@@ -78,9 +66,7 @@ const Index = () => {
       area: '180 м²',
       duration: '8 месяцев',
       image: 'https://cdn.poehali.dev/files/2b4dfd87-e773-459c-baf8-ccdc43a41912.jpg',
-      description: 'Дом из газобетонных блоков с кирпичной кладкой',
-      beforeImage: 'https://cdn.poehali.dev/files/b2c238fd-4160-4ed5-8cec-dbd5a16e85df.jpg',
-      afterImage: 'https://cdn.poehali.dev/files/2b4dfd87-e773-459c-baf8-ccdc43a41912.jpg'
+      description: 'Дом из газобетонных блоков с кирпичной кладкой'
     },
     {
       id: 7,
@@ -89,9 +75,7 @@ const Index = () => {
       area: '220 м²',
       duration: '3 месяца',
       image: 'https://cdn.poehali.dev/files/b2c238fd-4160-4ed5-8cec-dbd5a16e85df.jpg',
-      description: 'Монолитный ленточный фундамент с армированием',
-      beforeImage: 'https://cdn.poehali.dev/files/b2c238fd-4160-4ed5-8cec-dbd5a16e85df.jpg',
-      afterImage: 'https://cdn.poehali.dev/files/3da74330-d2b7-4d8d-b02a-e0b48c125b0b.jpg'
+      description: 'Монолитный ленточный фундамент с армированием'
     }
   ];
 
@@ -256,11 +240,7 @@ const Index = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <Card 
-                key={project.id} 
-                className="overflow-hidden group hover:shadow-2xl transition-all duration-300 cursor-pointer"
-                onClick={() => setSelectedProject(project.id)}
-              >
+              <Card key={project.id} className="overflow-hidden group hover:shadow-2xl transition-all duration-300">
                 <div className="relative h-64 overflow-hidden">
                   <img 
                     src={project.image} 
@@ -268,10 +248,6 @@ const Index = () => {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                  <Badge className="absolute top-4 right-4 bg-accent text-white">
-                    <Icon name="Image" size={14} className="mr-1" />
-                    До/После
-                  </Badge>
                 </div>
                 <CardHeader>
                   <CardTitle className="text-xl">{project.title}</CardTitle>
@@ -291,82 +267,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {selectedProject && (
-        <div 
-          className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-          onClick={() => setSelectedProject(null)}
-        >
-          <Card 
-            className="max-w-6xl w-full max-h-[90vh] overflow-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <CardHeader className="relative">
-              <Button 
-                variant="ghost" 
-                size="icon"
-                className="absolute top-4 right-4 z-10"
-                onClick={() => setSelectedProject(null)}
-              >
-                <Icon name="X" size={24} />
-              </Button>
-              <CardTitle className="text-2xl">
-                {projects.find(p => p.id === selectedProject)?.title}
-              </CardTitle>
-              <CardDescription>
-                {projects.find(p => p.id === selectedProject)?.description}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 gap-8">
-                <div>
-                  <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                    <Icon name="Construction" size={20} className="text-accent" />
-                    До начала работ
-                  </h3>
-                  <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-muted">
-                    <img 
-                      src={projects.find(p => p.id === selectedProject)?.beforeImage}
-                      alt="До"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold mb-4 flex items-center gap-2">
-                    <Icon name="CheckCircle" size={20} className="text-accent" />
-                    После завершения
-                  </h3>
-                  <div className="relative aspect-video rounded-lg overflow-hidden border-2 border-accent">
-                    <img 
-                      src={projects.find(p => p.id === selectedProject)?.afterImage}
-                      alt="После"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="grid md:grid-cols-3 gap-6 mt-8 p-6 bg-secondary/50 rounded-xl">
-                <div className="text-center">
-                  <Icon name="Ruler" size={32} className="text-accent mx-auto mb-2" />
-                  <div className="font-bold text-lg">{projects.find(p => p.id === selectedProject)?.area}</div>
-                  <div className="text-sm text-muted-foreground">Площадь объекта</div>
-                </div>
-                <div className="text-center">
-                  <Icon name="Clock" size={32} className="text-accent mx-auto mb-2" />
-                  <div className="font-bold text-lg">{projects.find(p => p.id === selectedProject)?.duration}</div>
-                  <div className="text-sm text-muted-foreground">Срок реализации</div>
-                </div>
-                <div className="text-center">
-                  <Icon name="Award" size={32} className="text-accent mx-auto mb-2" />
-                  <div className="font-bold text-lg">5 лет</div>
-                  <div className="text-sm text-muted-foreground">Гарантия</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      )}
 
       <section id="about" className="py-20 px-4">
         <div className="container mx-auto">
