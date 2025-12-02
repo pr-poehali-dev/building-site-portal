@@ -204,6 +204,7 @@ const Index = () => {
           <div className="hidden md:flex items-center gap-6">
             <a href="#services" className="hover:text-accent transition-colors">Услуги</a>
             <a href="#portfolio" className="hover:text-accent transition-colors">Проекты</a>
+            <a href="#certificates" className="hover:text-accent transition-colors">Сертификаты</a>
             <a href="#technologies" className="hover:text-accent transition-colors">Технологии</a>
             <a href="#calculator" className="hover:text-accent transition-colors">Калькулятор</a>
             <a href="#contact" className="hover:text-accent transition-colors">Контакты</a>
@@ -419,7 +420,93 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="technologies" className="py-20 px-4 bg-secondary/50">
+      <section id="certificates" className="py-20 px-4 bg-secondary/50">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Сертификаты и лицензии</h2>
+            <p className="text-muted-foreground text-lg">Подтверждение нашей квалификации и надёжности</p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <Card className="p-6 text-center hover:shadow-xl transition-all hover:-translate-y-2 group">
+              <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent transition-colors">
+                <Icon name="FileCheck" size={40} className="text-accent group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Лицензия СРО</h3>
+              <p className="text-sm text-muted-foreground mb-3">Свидетельство о допуске к строительным работам</p>
+              <Badge variant="secondary">№ РФ-12345-СРО</Badge>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all hover:-translate-y-2 group">
+              <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent transition-colors">
+                <Icon name="Award" size={40} className="text-accent group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">ISO 9001:2015</h3>
+              <p className="text-sm text-muted-foreground mb-3">Система менеджмента качества</p>
+              <Badge variant="secondary">Сертификат актуален</Badge>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all hover:-translate-y-2 group">
+              <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent transition-colors">
+                <Icon name="Shield" size={40} className="text-accent group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Страхование</h3>
+              <p className="text-sm text-muted-foreground mb-3">Ответственность застрахована на 50 млн ₽</p>
+              <Badge variant="secondary">АО "АльфаСтрахование"</Badge>
+            </Card>
+
+            <Card className="p-6 text-center hover:shadow-xl transition-all hover:-translate-y-2 group">
+              <div className="w-20 h-20 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent transition-colors">
+                <Icon name="Trophy" size={40} className="text-accent group-hover:text-white transition-colors" />
+              </div>
+              <h3 className="font-bold text-lg mb-2">Награды</h3>
+              <p className="text-sm text-muted-foreground mb-3">Лучшая строительная компания 2023</p>
+              <Badge variant="secondary">Рейтинг РБК</Badge>
+            </Card>
+          </div>
+
+          <Card className="p-8 bg-accent/5 border-accent/20">
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-24 h-24 bg-accent/10 rounded-2xl flex items-center justify-center">
+                  <Icon name="BadgeCheck" size={48} className="text-accent" />
+                </div>
+              </div>
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl font-bold mb-2">Работаем официально и прозрачно</h3>
+                <p className="text-muted-foreground mb-4">
+                  Все наши сертификаты и лицензии можно проверить на официальных порталах. 
+                  Мы предоставляем полный пакет документов перед началом работ.
+                </p>
+                <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                  <Badge variant="outline" className="text-sm">
+                    <Icon name="Check" size={16} className="mr-1" />
+                    Договор по 214-ФЗ
+                  </Badge>
+                  <Badge variant="outline" className="text-sm">
+                    <Icon name="Check" size={16} className="mr-1" />
+                    Гарантия 5 лет
+                  </Badge>
+                  <Badge variant="outline" className="text-sm">
+                    <Icon name="Check" size={16} className="mr-1" />
+                    Актуальная смета
+                  </Badge>
+                  <Badge variant="outline" className="text-sm">
+                    <Icon name="Check" size={16} className="mr-1" />
+                    Контроль на всех этапах
+                  </Badge>
+                </div>
+              </div>
+              <Button size="lg" className="bg-accent hover:bg-accent/90 flex-shrink-0">
+                <Icon name="Download" size={20} className="mr-2" />
+                Скачать документы
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </section>
+
+      <section id="technologies" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Используемые технологии</h2>
