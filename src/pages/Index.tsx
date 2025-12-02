@@ -604,160 +604,64 @@ const Index = () => {
       </section>
 
       <section id="contact" className="py-20 px-4 bg-secondary/50">
-        <div className="container mx-auto max-w-6xl">
+        <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Оставьте заявку на расчёт</h2>
-            <p className="text-muted-foreground text-lg">Заполните форму, и мы свяжемся с вами в течение 15 минут</p>
+            <h2 className="text-4xl font-bold mb-4">Свяжитесь с нами</h2>
+            <p className="text-muted-foreground text-lg">Готовы ответить на все ваши вопросы</p>
           </div>
           
-          <div className="grid lg:grid-cols-2 gap-8">
-            <Card className="p-8 shadow-xl">
-              <CardHeader className="p-0 mb-6">
-                <CardTitle className="text-2xl">Форма обратной связи</CardTitle>
-                <CardDescription>Рассчитаем стоимость вашего проекта бесплатно</CardDescription>
-              </CardHeader>
-              <CardContent className="p-0 space-y-4">
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Ваше имя *</label>
-                  <input 
-                    type="text" 
-                    placeholder="Иван Иванов"
-                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                  />
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="Phone" size={24} className="text-accent" />
                 </div>
-
                 <div>
-                  <label className="text-sm font-medium mb-2 block">Телефон *</label>
-                  <input 
-                    type="tel" 
-                    placeholder="+7 (___) ___-__-__"
-                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                  />
+                  <h3 className="font-bold mb-2">Телефон</h3>
+                  <p className="text-muted-foreground">+7 (904)300-76-25</p>
+                  <p className="text-muted-foreground">+7 (908)068-48-55</p>
                 </div>
-
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Email</label>
-                  <input 
-                    type="email" 
-                    placeholder="example@mail.ru"
-                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Тип объекта *</label>
-                  <select className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent">
-                    <option value="">Выберите тип</option>
-                    <option value="residential">Жилой дом</option>
-                    <option value="warehouse">Склад/Ангар</option>
-                    <option value="commercial">Коммерческое здание</option>
-                    <option value="foundation">Фундамент</option>
-                    <option value="other">Другое</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Площадь объекта (м²)</label>
-                  <input 
-                    type="number" 
-                    placeholder="150"
-                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
-                  />
-                </div>
-
-                <div>
-                  <label className="text-sm font-medium mb-2 block">Комментарий</label>
-                  <textarea 
-                    placeholder="Опишите ваш проект..."
-                    rows={4}
-                    className="w-full px-4 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent resize-none"
-                  />
-                </div>
-
-                <Button className="w-full bg-accent hover:bg-accent/90" size="lg">
-                  <Icon name="Send" size={20} className="mr-2" />
-                  Отправить заявку
-                </Button>
-
-                <p className="text-xs text-muted-foreground text-center">
-                  Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности
-                </p>
-              </CardContent>
+              </div>
             </Card>
 
-            <div className="space-y-6">
-              <Card className="p-8 bg-accent/5 border-accent/20">
-                <div className="flex items-start gap-4 mb-6">
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="CheckCircle2" size={24} className="text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg mb-2">Что вы получите?</h3>
-                    <p className="text-sm text-muted-foreground">После отправки заявки наш специалист:</p>
-                  </div>
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="Mail" size={24} className="text-accent" />
                 </div>
-                <div className="space-y-3">
-                  <div className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-accent mt-0.5 flex-shrink-0" />
-                    <p className="text-sm">Свяжется с вами в течение 15 минут</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-accent mt-0.5 flex-shrink-0" />
-                    <p className="text-sm">Проконсультирует по всем вопросам</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-accent mt-0.5 flex-shrink-0" />
-                    <p className="text-sm">Рассчитает точную стоимость проекта</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-accent mt-0.5 flex-shrink-0" />
-                    <p className="text-sm">Подготовит индивидуальное предложение</p>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Icon name="Check" size={20} className="text-accent mt-0.5 flex-shrink-0" />
-                    <p className="text-sm">Согласует дату выезда на объект (при необходимости)</p>
-                  </div>
+                <div>
+                  <h3 className="font-bold mb-2">Email</h3>
+                  <p className="text-muted-foreground">info@stroymaster.ru</p>
+                  <p className="text-muted-foreground">sales@stroymaster.ru</p>
                 </div>
-              </Card>
+              </div>
+            </Card>
 
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Phone" size={24} className="text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-2">Телефон</h3>
-                    <p className="text-muted-foreground">+7 (904) 300-76-25</p>
-                    <p className="text-muted-foreground">+7 (908) 068-48-55</p>
-                  </div>
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="MapPin" size={24} className="text-accent" />
                 </div>
-              </Card>
+                <div>
+                  <h3 className="font-bold mb-2">Адрес офиса</h3>
+                  <p className="text-muted-foreground">г. Челябинск, Дербентская 49А</p>
+                  <p className="text-muted-foreground"></p>
+                </div>
+              </div>
+            </Card>
 
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="MapPin" size={24} className="text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-2">Адрес офиса</h3>
-                    <p className="text-muted-foreground">г. Челябинск, Дербентская 49А</p>
-                  </div>
+            <Card className="p-8 hover:shadow-lg transition-shadow">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Icon name="Clock" size={24} className="text-accent" />
                 </div>
-              </Card>
-
-              <Card className="p-8 hover:shadow-lg transition-shadow">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Icon name="Clock" size={24} className="text-accent" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold mb-2">Время работы</h3>
-                    <p className="text-muted-foreground">Пн-Пт: 9:00 - 18:00</p>
-                    <p className="text-muted-foreground">Сб-Вс: по договорённости</p>
-                  </div>
+                <div>
+                  <h3 className="font-bold mb-2">Время работы</h3>
+                  <p className="text-muted-foreground">Пн-Пт: 9:00 - 18:00</p>
+                  <p className="text-muted-foreground">Сб-Вс: по договорённости</p>
                 </div>
-              </Card>
-            </div>
+              </div>
+            </Card>
           </div>
         </div>
       </section>
