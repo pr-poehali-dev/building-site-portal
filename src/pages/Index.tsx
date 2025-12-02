@@ -34,21 +34,48 @@ const Index = () => {
     },
     {
       id: 3,
-      title: 'Жилой комплекс "Сосновый бор"',
+      title: 'Коттедж из кирпича под ключ',
       type: 'residential',
-      area: '15,000 м²',
-      duration: '18 месяцев',
-      image: 'https://cdn.poehali.dev/projects/c61c3e08-801d-455e-8e88-f9a5b4887bdf/files/aee0b416-0560-4119-8ecc-b0cec8f4c7c0.jpg',
-      description: 'Современный жилой комплекс премиум-класса'
+      area: '280 м²',
+      duration: '10 месяцев',
+      image: 'https://cdn.poehali.dev/files/3da74330-d2b7-4d8d-b02a-e0b48c125b0b.jpg',
+      description: 'Двухэтажный кирпичный дом с гаражом'
     },
     {
       id: 4,
-      title: 'Бизнес-центр "Горизонт"',
+      title: 'Модульное административное здание',
       type: 'commercial',
-      area: '8,500 м²',
-      duration: '14 месяцев',
-      image: 'https://cdn.poehali.dev/projects/c61c3e08-801d-455e-8e88-f9a5b4887bdf/files/0c2b84a4-6434-4b90-a019-0ef2b3824919.jpg',
-      description: 'Офисное здание класса А в центре города'
+      area: '450 м²',
+      duration: '4 месяца',
+      image: 'https://cdn.poehali.dev/files/5c0adb3b-6475-47dc-8fc1-a288ef416ab2.png',
+      description: 'Быстровозводимое модульное здание для офисов'
+    },
+    {
+      id: 5,
+      title: 'Складской комплекс с профлиста',
+      type: 'warehouse',
+      area: '3,200 м²',
+      duration: '7 месяцев',
+      image: 'https://cdn.poehali.dev/files/67f2b66e-78c9-48fd-8916-ae53b219e13e.jpg',
+      description: 'Производственно-складской комплекс из профнастила'
+    },
+    {
+      id: 6,
+      title: 'Строительство дома из газобетона',
+      type: 'residential',
+      area: '180 м²',
+      duration: '8 месяцев',
+      image: 'https://cdn.poehali.dev/files/2b4dfd87-e773-459c-baf8-ccdc43a41912.jpg',
+      description: 'Дом из газобетонных блоков с кирпичной кладкой'
+    },
+    {
+      id: 7,
+      title: 'Фундамент под жилой дом',
+      type: 'residential',
+      area: '220 м²',
+      duration: '3 месяца',
+      image: 'https://cdn.poehali.dev/files/b2c238fd-4160-4ed5-8cec-dbd5a16e85df.jpg',
+      description: 'Монолитный ленточный фундамент с армированием'
     }
   ];
 
